@@ -380,7 +380,7 @@ def plot_outputs(summary: pd.DataFrame, pattern: pd.DataFrame, fig_dir: Path) ->
     fig_dir.mkdir(parents=True, exist_ok=True)
     scratch = pattern[pattern["failureType"] == "Scratch"].copy()
     if not scratch.empty:
-        plt.figure(figsize=(11, 5.5))
+        plt.figure(figsize=(13.5, 5.5))
         sns.lineplot(
             data=scratch,
             x="guard_count",
@@ -394,8 +394,16 @@ def plot_outputs(summary: pd.DataFrame, pattern: pd.DataFrame, fig_dir: Path) ->
         plt.xlabel("Scratch guard points within Top32")
         plt.ylabel("Mean defect coverage")
         plt.grid(alpha=0.25)
+        plt.legend(
+            title="policy_name / target_density",
+            loc="center left",
+            bbox_to_anchor=(1.02, 0.5),
+            borderaxespad=0.0,
+            fontsize=8,
+            title_fontsize=8,
+        )
         plt.tight_layout()
-        plt.savefig(fig_dir / "scratch_coverage_by_guard_count.png", dpi=180)
+        plt.savefig(fig_dir / "scratch_coverage_by_guard_count.png", dpi=180, bbox_inches="tight")
         plt.close()
 
     focus = summary[summary["policy_name"].isin(["ensemble_top32", "scratch_guard_all_8", "oracle_scratch_route_8", "predicted_scratch_top1_route_8"])].copy()
