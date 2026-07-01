@@ -2,6 +2,9 @@
 
 Risk-based follow-up sampling for sparse wafer defect observation.
 
+For a paper-style project explanation, see
+[docs/technical_report.md](docs/technical_report.md).
+
 Most WM-811K projects classify the defect pattern of a wafer map. This project
 asks a different inspection question:
 
