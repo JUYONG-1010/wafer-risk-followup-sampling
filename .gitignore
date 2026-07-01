@@ -1,0 +1,45 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Large local data. Keep the public repo lightweight.
+LSWMD.pkl/
+data/raw/
+data/processed/**
+!data/processed/
+!data/processed/.gitkeep
+data/processed/**/*.pkl
+data/processed/**/*.parquet
+data/processed/**/*.npy
+data/processed/**/*.npz
+data/processed/**/*.csv
+data/processed/metadata/labeled_metadata.csv
+data/processed/sampling/sampling_results*.csv
+data/processed/radial/radial_sensitivity_results.csv
+data/processed/**/model_training/
+
+# Large or export-style generated outputs.
+outputs/
+models/
+outputs/tmp/
+reports/*.html
+reports/*.pdf
+reports/**/*.csv
+reports/**/*.log
+reports/*/
+reports/project_log.md
+reports/readme_improvement_prompt.md
+reports/colab_drive_upload_instructions.md
+reports/todo_next_steps.md
+*.zip
+colab_upload_package/
+.playwright-mcp/
+drive-login-state.png
+
+# Local reference PDFs are not redistributed in the public repo.
+papers/*.pdf
+
+# Local environments.
+.venv/
+venv/
+.env
