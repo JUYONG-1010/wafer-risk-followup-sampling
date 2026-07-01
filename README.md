@@ -26,13 +26,30 @@ observation, wafer geometry, and candidate die coordinates.
 | Allowed at recommendation time | Sparse first-pass observations, wafer geometry, candidate die coordinates, and derived features |
 | Forbidden at recommendation time | Dense wafer map, hidden defect coordinates, actual defect ratio, true `failureType` label |
 | Final Top-32 model | RandomForest point-risk ranking (`noncnn_top32`) |
+| Baseline | Geometry-only `coverage32` |
+| Main metric | Top-32 hit rate / `precision@32` |
 | Secondary visual model | Sparse CNN 2D risk map |
-| Headline improvement | Top-32 hit rate improves from 20.1% to 69.1% over a geometry-only baseline |
+| Headline result | Top-32 hit rate improves from 20.1% to 69.1%, a +244.0% relative gain |
+
+## Quick Start
+
+```bash
+python -m pip install -r requirements.txt
+python scripts/01_extract_labeled_subset.py
+python scripts/final/run_final_demo.py --max-test-wafers 100
+```
+
+The final demo is a lightweight local reproduction check. It compares the
+geometry-only `coverage32` baseline against the RandomForest point-risk ranker
+and writes a compact summary to `reports/final_demo/final_demo_summary.md`.
+
+If the processed dataset is missing, the demo exits with the exact preprocessing
+command instead of fabricating results.
 
 ## Headline Result
 
-On a 3-seed repeated wafer-level split of WM-811K patterned wafers, using the
-same 32 follow-up measurement budget:
+On a 3-seed repeated wafer-level split on WM-811K patterned wafers, using the
+same 32-point follow-up measurement budget:
 
 | Follow-up strategy | Meaning | Avg. true defects found out of 32 | Hit rate among 32 recommendations |
 |---|---|---:|---:|
@@ -51,7 +68,16 @@ baseline in the 3-seed repeated split result.
 
 ![Top-32 hit rate by first-pass sampling density](docs/assets/result_top32_hit_rate.png)
 
-## Experimental Setup
+## Final Decision
+
+```text
+Final Top-32 policy: RandomForest point-risk ranking (`noncnn_top32`)
+CNN role: 2D risk-map visualization
+Ensemble role: ablation only; repeated-split Top-32 result favored RF-only
+Baseline: geometry-only `coverage32`
+```
+
+## Experimental Setup / Result Provenance
 
 | Item | Setting |
 |---|---|
@@ -115,7 +141,7 @@ The main operating example uses `K = 32` follow-up points because it is a small,
 fixed inspection budget that makes different policies easy to compare. The
 project also evaluates K = 16, 32, 64, and 128.
 
-## Information Boundary
+## Information Boundary / Leakage Prevention
 
 Dense wafer maps are used only as offline ground truth. The recommendation model
 does not see hidden defect locations when it chooses follow-up dies.
@@ -125,8 +151,8 @@ Allowed at recommendation time:
 ```text
 - first-pass sparse observation
 - wafer geometry
-- candidate die coordinates
-- distances to observed points
+- candidate die coordinates/features
+- distances/features derived from first-pass evidence
 - model risk scores derived from allowed features
 - CNN risk map derived from sparse observation
 ```

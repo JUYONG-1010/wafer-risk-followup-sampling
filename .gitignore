@@ -20,6 +20,8 @@ data/processed/**/model_training/
 
 # Large or export-style generated outputs.
 outputs/
+output/
+tmp/
 models/
 outputs/tmp/
 reports/*.html
