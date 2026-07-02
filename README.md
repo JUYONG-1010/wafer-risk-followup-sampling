@@ -2,7 +2,7 @@
 
 Risk-based follow-up sampling for sparse wafer defect observation.
 
-For a paper-style project explanation, see
+For a detailed technical report, see
 [docs/technical_report.md](docs/technical_report.md).
 
 Most WM-811K projects classify the defect pattern of a wafer map. This project
@@ -620,14 +620,6 @@ papers/                  local paper references used during project planning
 6. This is not a production recipe and does not claim deployed yield
    improvement.
 ```
-
-## Why This Is Portfolio-Relevant
-
-This project is built around sampling policy evaluation rather than generic
-wafer-map classification. It shows how to define a cost-limited follow-up
-measurement problem, enforce an inference-time information boundary, compare
-against a strong geometry-only baseline, and report both gains and limitations
-without claiming production deployment.
 
 ## References And Related Work
 

@@ -1,6 +1,6 @@
 # Risk-Aware Follow-Up Sampling for Sparse Wafer Defect Observation
 
-**A public technical report for portfolio and project review**
+**A technical report on limited-budget wafer follow-up sampling**
 
 ## Abstract
 
@@ -450,4 +450,3 @@ follow-up recommendation -> offline dense-map validation
 - Public WM-811K classification repositories and dataset explanations reviewed
   during project positioning.
 - Internal project experiments in `scripts/01` through `scripts/79`.
-
