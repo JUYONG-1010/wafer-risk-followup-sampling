@@ -24,11 +24,11 @@ def main() -> int:
     args = parse_args()
     if not (PROJECT_ROOT / DEFAULT_PATTERNED).exists():
         print("Missing processed data. Run:")
-        print("  python scripts/01_extract_labeled_subset.py")
+        print("  python scripts/final/prepare_data.py")
         return 2
     command = [
         sys.executable,
-        "scripts/71_train_sparse_cnn_risk_map_batched.py",
+        "experiments/71_train_sparse_cnn_risk_map_batched.py",
         "--patterned",
         str(DEFAULT_PATTERNED),
         "--densities",

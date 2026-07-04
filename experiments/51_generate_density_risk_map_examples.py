@@ -27,9 +27,9 @@ DEFAULT_MORPH_DATASET = (
 )
 DEFAULT_OUT_DIR = Path("outputs") / "figures" / "41_density_risk_map_examples_v1"
 DEFAULT_REPORT_DIR = Path("reports") / "density_risk_map_examples_v1"
-POLICY_SCRIPT = Path("scripts") / "42_evaluate_morphology_aware_policy.py"
-DENSITY_POLICY_SCRIPT = Path("scripts") / "47_evaluate_density_followup_policy.py"
-RISK_MAP_SCRIPT = Path("scripts") / "50_evaluate_density_risk_maps.py"
+POLICY_SCRIPT = Path("experiments") / "42_evaluate_morphology_aware_policy.py"
+DENSITY_POLICY_SCRIPT = Path("experiments") / "47_evaluate_density_followup_policy.py"
+RISK_MAP_SCRIPT = Path("experiments") / "50_evaluate_density_risk_maps.py"
 DEFAULT_PATTERNS = ["Loc", "Scratch", "Edge-Loc", "Edge-Ring", "Donut", "Center", "Random"]
 
 

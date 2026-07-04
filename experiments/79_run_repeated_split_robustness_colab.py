@@ -64,7 +64,7 @@ def run_seed(args: argparse.Namespace, seed: int) -> None:
     density_args = [str(value) for value in args.densities]
     cnn_command = [
         sys.executable,
-        "scripts/71_train_sparse_cnn_risk_map_batched.py",
+        "experiments/71_train_sparse_cnn_risk_map_batched.py",
         "--patterned",
         str(args.patterned),
         "--out-dir",
@@ -100,7 +100,7 @@ def run_seed(args: argparse.Namespace, seed: int) -> None:
 
     ensemble_command = [
         sys.executable,
-        "scripts/76_evaluate_cnn_noncnn_ensemble.py",
+        "experiments/76_evaluate_cnn_noncnn_ensemble.py",
         "--patterned",
         str(args.patterned),
         "--cnn-model",

@@ -3,13 +3,14 @@
 These scripts are the public-facing entry points for quick reproduction and
 demo runs.
 
-The original numbered scripts in `scripts/01_...` through `scripts/79_...` are
-preserved as experiment history. Use this folder when you want a cleaner command
-surface for GitHub review.
+The original numbered scripts were moved to `experiments/` and are preserved as
+experiment history. Use this folder when you want a cleaner command surface for
+GitHub review.
 
 ## Recommended Quick Demo
 
 ```bash
+python scripts/final/prepare_data.py
 python scripts/final/run_final_demo.py --max-test-wafers 100
 ```
 

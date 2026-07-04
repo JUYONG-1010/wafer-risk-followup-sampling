@@ -20,8 +20,8 @@ if str(PROJECT_ROOT) not in sys.path:
 DEFAULT_PATTERNED = Path("data") / "processed" / "subsets" / "patterned_subset.pkl"
 DEFAULT_OUT_DIR = Path("data") / "processed" / "augmented_morphology_v1"
 DEFAULT_FIG_DIR = Path("outputs") / "figures" / "49_augmented_morphology_v1"
-DENSITY_POLICY_SCRIPT = Path("scripts") / "47_evaluate_density_followup_policy.py"
-INITIAL_PROBE_SCRIPT = Path("scripts") / "46_evaluate_initial_probe_density.py"
+DENSITY_POLICY_SCRIPT = Path("experiments") / "47_evaluate_density_followup_policy.py"
+INITIAL_PROBE_SCRIPT = Path("experiments") / "46_evaluate_initial_probe_density.py"
 
 DISCOVERY_PATTERNS = {"Center", "Donut", "Edge-Loc", "Edge-Ring", "Loc", "Scratch"}
 LOW_BIAS_PATTERNS = {"Random"}

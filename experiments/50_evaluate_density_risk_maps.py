@@ -28,8 +28,8 @@ DEFAULT_MORPH_DATASET = (
 )
 DEFAULT_OUT_DIR = Path("data") / "processed" / "density_risk_maps_v1"
 DEFAULT_FIG_DIR = Path("outputs") / "figures" / "40_density_risk_maps_v1"
-POLICY_SCRIPT = Path("scripts") / "42_evaluate_morphology_aware_policy.py"
-DENSITY_POLICY_SCRIPT = Path("scripts") / "47_evaluate_density_followup_policy.py"
+POLICY_SCRIPT = Path("experiments") / "42_evaluate_morphology_aware_policy.py"
+DENSITY_POLICY_SCRIPT = Path("experiments") / "47_evaluate_density_followup_policy.py"
 
 
 def load_module(name: str, path: Path):

@@ -25,7 +25,7 @@ DEFAULT_MORPH_DATASET = (
     / "initial_probe_density_dataset.csv"
 )
 DEFAULT_MODEL_DIR = Path("models") / "final_inference_v1"
-DENSITY_POLICY_SCRIPT = Path("scripts") / "47_evaluate_density_followup_policy.py"
+DENSITY_POLICY_SCRIPT = Path("experiments") / "47_evaluate_density_followup_policy.py"
 
 
 def load_module(name: str, path: Path):

@@ -24,7 +24,7 @@ def main() -> int:
     args = parse_args()
     command = [
         sys.executable,
-        "scripts/75_evaluate_topk_budget_curve.py",
+        "experiments/75_evaluate_topk_budget_curve.py",
         "--patterned",
         str(DEFAULT_PATTERNED),
         "--cnn-model",
@@ -41,7 +41,7 @@ def main() -> int:
     print(" ".join(display_command))
     if not (PROJECT_ROOT / DEFAULT_PATTERNED).exists():
         print("\nMissing processed data. Run:")
-        print("  python scripts/01_extract_labeled_subset.py")
+        print("  python experiments/01_extract_labeled_subset.py")
         return 2
     if not (PROJECT_ROOT / DEFAULT_CNN_MODEL).exists():
         print("\nMissing CNN checkpoint. This wrapper will not fabricate results.")

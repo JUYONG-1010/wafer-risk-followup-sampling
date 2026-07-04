@@ -36,7 +36,7 @@ FIXED_POLICIES = [
 
 
 def load_density_policy_module():
-    module_path = PROJECT_ROOT / "scripts" / "47_evaluate_density_followup_policy.py"
+    module_path = PROJECT_ROOT / "experiments" / "47_evaluate_density_followup_policy.py"
     spec = importlib.util.spec_from_file_location("density_policy47", module_path)
     if spec is None or spec.loader is None:
         raise RuntimeError(f"Could not load {module_path}")

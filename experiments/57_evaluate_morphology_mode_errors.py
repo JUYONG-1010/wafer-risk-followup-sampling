@@ -25,7 +25,7 @@ DEFAULT_MORPH_DATASET = (
 )
 DEFAULT_OUT_DIR = Path("data") / "processed" / "morphology_mode_errors_v1"
 DEFAULT_FIG_DIR = Path("outputs") / "figures" / "47_morphology_mode_errors_v1"
-DENSITY_POLICY_SCRIPT = Path("scripts") / "47_evaluate_density_followup_policy.py"
+DENSITY_POLICY_SCRIPT = Path("experiments") / "47_evaluate_density_followup_policy.py"
 
 DISCOVERY_PATTERNS = {"Center", "Donut", "Edge-Loc", "Edge-Ring", "Loc", "Scratch"}
 LOW_BIAS_PATTERNS = {"Random"}

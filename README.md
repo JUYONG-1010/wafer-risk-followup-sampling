@@ -35,7 +35,7 @@ observation, wafer geometry, and candidate die coordinates.
 
 ```bash
 python -m pip install -r requirements.txt
-python scripts/01_extract_labeled_subset.py
+python scripts/final/prepare_data.py
 python scripts/final/run_final_demo.py --max-test-wafers 100
 ```
 
@@ -489,7 +489,7 @@ python -m pip install -r requirements.txt
 Extract labeled and patterned wafer subsets:
 
 ```bash
-python scripts/01_extract_labeled_subset.py
+python scripts/final/prepare_data.py
 ```
 
 This creates:
@@ -504,7 +504,7 @@ reports/dataset_summary.md
 Run the full repeated-split robustness workflow:
 
 ```bash
-python scripts/79_run_repeated_split_robustness_colab.py ^
+python experiments/79_run_repeated_split_robustness_colab.py ^
   --seeds 42 101 202 ^
   --densities 0.01 0.03 0.05 0.10 ^
   --top-k 32 ^
@@ -529,7 +529,7 @@ notebooks/colab_repeated_split_robustness.ipynb
 Local smoke test for the sparse CNN:
 
 ```bash
-python scripts/71_train_sparse_cnn_risk_map_batched.py ^
+python experiments/71_train_sparse_cnn_risk_map_batched.py ^
   --densities 0.03 ^
   --epochs 1 ^
   --max-train-wafers 80 ^
@@ -540,19 +540,19 @@ Evaluate the CNN / RandomForest / ensemble comparison if a CNN checkpoint
 exists:
 
 ```bash
-python scripts/76_evaluate_cnn_noncnn_ensemble.py
+python experiments/76_evaluate_cnn_noncnn_ensemble.py
 ```
 
 Run the Top-K budget curve:
 
 ```bash
-python scripts/75_evaluate_topk_budget_curve.py
+python experiments/75_evaluate_topk_budget_curve.py
 ```
 
 Generate CNN hit/miss visual examples if a compatible CNN checkpoint exists:
 
 ```bash
-python scripts/73_generate_cnn_hit_miss_visual_examples.py
+python experiments/73_generate_cnn_hit_miss_visual_examples.py
 ```
 
 ### Expected Outputs
@@ -582,7 +582,8 @@ data/processed/topk_budget_curve_v1/topk_budget_curve_summary.csv
 ## Repository Structure
 
 ```text
-scripts/                 experiment and evaluation scripts
+scripts/final/           public-facing reproduction wrappers
+experiments/             chronological experiment history scripts
 src/                     reusable sampling and feature utilities
 reports/                 project log, summaries, and positioning notes
 docs/assets/             README figures tracked for public GitHub display
@@ -634,3 +635,5 @@ or dataset explanation. Useful references reviewed while shaping this README:
 
 The key distinction is that this repository focuses on limited-budget follow-up
 site recommendation, not only wafer defect class prediction.
+For deeper reproduction, the underlying experiment script is
+`experiments/01_extract_labeled_subset.py`.

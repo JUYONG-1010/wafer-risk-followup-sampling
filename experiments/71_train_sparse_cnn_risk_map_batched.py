@@ -39,8 +39,8 @@ def load_module(name: str, path: Path):
     return module
 
 
-density_policy = load_module("density_policy47", Path("scripts") / "47_evaluate_density_followup_policy.py")
-sparse_cnn = load_module("sparse_cnn68", Path("scripts") / "68_train_sparse_cnn_risk_map.py")
+density_policy = load_module("density_policy47", Path("experiments") / "47_evaluate_density_followup_policy.py")
+sparse_cnn = load_module("sparse_cnn68", Path("experiments") / "68_train_sparse_cnn_risk_map.py")
 
 
 @dataclass(frozen=True)

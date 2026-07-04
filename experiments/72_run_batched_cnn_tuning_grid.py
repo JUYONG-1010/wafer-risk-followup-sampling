@@ -9,7 +9,7 @@ import pandas as pd
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-SCRIPT_71 = PROJECT_ROOT / "scripts" / "71_train_sparse_cnn_risk_map_batched.py"
+SCRIPT_71 = PROJECT_ROOT / "experiments" / "71_train_sparse_cnn_risk_map_batched.py"
 
 
 def parse_args() -> argparse.Namespace:

@@ -29,7 +29,7 @@ FIG_DIR = PROJECT_ROOT / "outputs" / "figures" / "final_demo"
 
 
 def load_density_policy_module():
-    module_path = PROJECT_ROOT / "scripts" / "47_evaluate_density_followup_policy.py"
+    module_path = PROJECT_ROOT / "experiments" / "47_evaluate_density_followup_policy.py"
     spec = importlib.util.spec_from_file_location("density_policy47_final_demo", module_path)
     if spec is None or spec.loader is None:
         raise RuntimeError(f"Could not load {module_path}")
@@ -72,7 +72,7 @@ def require_processed_data(patterned_path: Path) -> bool:
     print("\nTo create it, place the raw WM-811K pickle at:")
     print("  LSWMD.pkl/LSWMD.pkl")
     print("\nThen run:")
-    print("  python scripts/01_extract_labeled_subset.py")
+    print("  python experiments/01_extract_labeled_subset.py")
     print("\nThis demo exits without fabricating results.\n")
     return False
 

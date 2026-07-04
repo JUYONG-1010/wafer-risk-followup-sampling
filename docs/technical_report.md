@@ -449,4 +449,4 @@ follow-up recommendation -> offline dense-map validation
 - WM-811K / LSWMD wafer map dataset.
 - Public WM-811K classification repositories and dataset explanations reviewed
   during project positioning.
-- Internal project experiments in `scripts/01` through `scripts/79`.
+- Internal project experiments in `experiments/01` through `experiments/79`.

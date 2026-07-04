@@ -27,7 +27,7 @@ DEFAULT_MORPH_DATASET = (
 )
 DEFAULT_OUT_DIR = Path("data") / "processed" / "density_hybrid_scoring_tuning_v1"
 DEFAULT_FIG_DIR = Path("outputs") / "figures" / "43_density_hybrid_scoring_tuning_v1"
-DENSITY_POLICY_SCRIPT = Path("scripts") / "47_evaluate_density_followup_policy.py"
+DENSITY_POLICY_SCRIPT = Path("experiments") / "47_evaluate_density_followup_policy.py"
 
 
 def load_module(name: str, path: Path):

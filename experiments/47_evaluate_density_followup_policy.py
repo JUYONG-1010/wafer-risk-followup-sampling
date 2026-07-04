@@ -41,7 +41,7 @@ DEFAULT_COST_WEIGHTS = [0.003]
 
 
 def load_policy_helpers():
-    module_path = PROJECT_ROOT / "scripts" / "42_evaluate_morphology_aware_policy.py"
+    module_path = PROJECT_ROOT / "experiments" / "42_evaluate_morphology_aware_policy.py"
     spec = importlib.util.spec_from_file_location("policy42", module_path)
     if spec is None or spec.loader is None:
         raise RuntimeError(f"Could not load {module_path}")

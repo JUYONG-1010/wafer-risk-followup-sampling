@@ -10,7 +10,7 @@ def main() -> int:
     print()
     print("Full project runner command:")
     print(
-        "  python scripts/79_run_repeated_split_robustness_colab.py "
+        "  python experiments/79_run_repeated_split_robustness_colab.py "
         "--seeds 42 101 202 --densities 0.01 0.03 0.05 0.10 "
         "--top-k 32 --epochs 8 --patience 3 --max-train-wafers 2500 "
         "--max-test-wafers 500 --batch-size 64 --hidden-channels 32 "

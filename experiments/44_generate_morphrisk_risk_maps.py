@@ -33,7 +33,7 @@ DEFAULT_MORPH_DATASET = (
 DEFAULT_PATTERNED = Path("data") / "processed" / "subsets" / "patterned_subset.pkl"
 DEFAULT_OUT_DIR = Path("outputs") / "figures" / "30_morphrisk_risk_maps_v1"
 DEFAULT_REPORT_DIR = Path("reports") / "morphrisk_risk_maps_v1"
-POLICY_SCRIPT = Path("scripts") / "42_evaluate_morphology_aware_policy.py"
+POLICY_SCRIPT = Path("experiments") / "42_evaluate_morphology_aware_policy.py"
 PATTERN_ORDER = ["Loc", "Scratch", "Random", "Edge-Ring", "Center", "Donut"]
 
 

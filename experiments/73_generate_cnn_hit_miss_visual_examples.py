@@ -29,7 +29,7 @@ DEFAULT_REPORT_DIR = Path("reports") / "cnn_hit_miss_visual_examples_v1"
 
 
 def load_sparse_cnn_module():
-    module_path = PROJECT_ROOT / "scripts" / "68_train_sparse_cnn_risk_map.py"
+    module_path = PROJECT_ROOT / "experiments" / "68_train_sparse_cnn_risk_map.py"
     spec = importlib.util.spec_from_file_location("sparse_cnn68", module_path)
     if spec is None or spec.loader is None:
         raise RuntimeError(f"Could not load {module_path}")

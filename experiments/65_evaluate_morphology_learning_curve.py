@@ -18,7 +18,7 @@ if str(PROJECT_ROOT) not in sys.path:
 DEFAULT_PATTERNED = Path("data") / "processed" / "subsets" / "patterned_subset.pkl"
 DEFAULT_OUT_DIR = Path("data") / "processed" / "morphology_learning_curve_v1"
 DEFAULT_FIG_DIR = Path("outputs") / "figures" / "55_morphology_learning_curve_v1"
-AUG_SCRIPT = Path("scripts") / "60_evaluate_augmented_morphology.py"
+AUG_SCRIPT = Path("experiments") / "60_evaluate_augmented_morphology.py"
 
 
 def load_module(name: str, path: Path):

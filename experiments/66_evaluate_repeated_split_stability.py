@@ -25,7 +25,7 @@ DEFAULT_MORPH_DATASET = (
 )
 DEFAULT_OUT_DIR = Path("data") / "processed" / "repeated_split_stability_v1"
 DEFAULT_FIG_DIR = Path("outputs") / "figures" / "56_repeated_split_stability_v1"
-DENSITY_POLICY_SCRIPT = Path("scripts") / "47_evaluate_density_followup_policy.py"
+DENSITY_POLICY_SCRIPT = Path("experiments") / "47_evaluate_density_followup_policy.py"
 
 FOCUS_STRATEGIES = [
     "coverage32",
